@@ -21,6 +21,7 @@
 		50D4B55526F7930E006E85C4 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B55426F7930E006E85C4 /* UITableViewExtensions.swift */; };
 		50D4B55926F7939F006E85C4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B55726F7939F006E85C4 /* ListTableViewCell.swift */; };
 		50D4B55A26F7939F006E85C4 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D4B55826F7939F006E85C4 /* ListTableViewCell.xib */; };
+		50D4B55E26F79D24006E85C4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 50D4B55D26F79D24006E85C4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		50D4B55426F7930E006E85C4 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		50D4B55726F7939F006E85C4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		50D4B55826F7939F006E85C4 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		50D4B55D26F79D24006E85C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		50D4B50B26F791A4006E85C4 = {
 			isa = PBXGroup;
 			children = (
+				50D4B55D26F79D24006E85C4 /* README.md */,
 				50D4B51626F791A4006E85C4 /* Metadata-dapi */,
 				50D4B52D26F791A7006E85C4 /* Metadata-dapiTests */,
 				50D4B53826F791A7006E85C4 /* Metadata-dapiUITests */,
@@ -307,6 +310,7 @@
 			files = (
 				50D4B52426F791A6006E85C4 /* LaunchScreen.storyboard in Resources */,
 				50D4B55A26F7939F006E85C4 /* ListTableViewCell.xib in Resources */,
+				50D4B55E26F79D24006E85C4 /* README.md in Resources */,
 				50D4B52126F791A6006E85C4 /* Assets.xcassets in Resources */,
 				50D4B51F26F791A4006E85C4 /* Main.storyboard in Resources */,
 			);
