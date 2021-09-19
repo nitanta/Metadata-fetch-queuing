@@ -25,18 +25,17 @@ final class ListingViewController: UIViewController {
         setupUI()
         configureDataSource()
         setupBindings()
-        viewModel.fetchMetadata()
+        viewModel.setupData()
     }
     
     /// Perform UI setup
     func setupUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = Constants.title
+        addRightBarItem()
         tableView.register(UINib(nibName: ListTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.cellIdentifier)
         tableView.delegate = self
-        
-        let rightButton = UIBarButtonItem(title: Constants.start, style: .plain, target: self, action: #selector(startButtonPressed))
-        navigationItem.rightBarButtonItem = rightButton
+        tableView.tableFooterView = UIView()
     }
     
     /// Add right button on the navigation bar

@@ -8,6 +8,17 @@
 import Foundation
 import Combine
 
+enum Sites: String, CaseIterable {
+    case apple          = "https://apple.com"
+    case spacex         = "https://spacex.com"
+    case dapi           = "https://dapi.co"
+    case facebook       = "https://facebook.com"
+    case microsoft      = "https://microsoft.com"
+    case amazon         = "https://amazon.com"
+    case boomsupersonic = "https://boomsupersonic.com"
+    
+}
+
 struct ListingModel: Hashable, Equatable {
     var url: String
     var imageURL: String?
@@ -36,31 +47,12 @@ final class ListingViewModel {
         self.service = service
     }
     
+    func setupData() {
+        datasource = Sites.allCases.map { ListingModel(url: $0.rawValue)}
+    }
+    
     func fetchMetadata() {
         
-//        let listCompletionHandler: (Subscribers.Completion<Error>) -> Void = { [weak self] completion in
-//            guard let self = self else { return }
-//            switch completion {
-//            case .failure(let error):
-//                self.state = .error(error)
-//            case .finished:
-//                self.state = .finishedLoading
-//            }
-//        }
-//
-//        let listValueHandler: (PokemonListingResponse) -> Void = { [weak self] response in
-//            guard let self = self else { return }
-//            let data = response.results.map { ListingModel(name: $0.name, detailURL: $0.url)}
-//            if self.offset == 0 {
-//                self.datasource = data
-//            } else {
-//                self.datasource.append(contentsOf: data)
-//            }
-//            self.hasMore = self.offset + self.limit <= response.count
-//            self.offset += self.limit
-//        }
-//
-//        service.fetchPokemonList(limit: limit, offset: offset).sink(receiveCompletion: listCompletionHandler, receiveValue: listValueHandler).store(in: &bag)
     }
     
 }

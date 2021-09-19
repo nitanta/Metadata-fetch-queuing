@@ -15,6 +15,7 @@ class ListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        [logoImageView, subtitleLabel].forEach { $0?.isHidden = true }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
