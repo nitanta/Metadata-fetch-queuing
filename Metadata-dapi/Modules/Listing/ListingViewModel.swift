@@ -16,15 +16,21 @@ enum Sites: String, CaseIterable {
     case microsoft      = "https://microsoft.com"
     case amazon         = "https://amazon.com"
     case boomsupersonic = "https://boomsupersonic.com"
-    
+    case twitter        = "https://twitter.com"
+}
+
+enum State: Hashable {
+    case idle
+    case running
+    case successful(String, String) // Favicon url and data size
+    case failed(Int) // error code
 }
 
 struct ListingModel: Hashable, Equatable {
     var url: String
-    var imageURL: String?
-    var size: String?
-    var statusCode: String?
+    var state: State = .idle
 }
+
 
 final class ListingViewModel {
     

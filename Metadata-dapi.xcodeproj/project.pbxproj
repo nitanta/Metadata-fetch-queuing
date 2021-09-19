@@ -22,6 +22,8 @@
 		50D4B55926F7939F006E85C4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B55726F7939F006E85C4 /* ListTableViewCell.swift */; };
 		50D4B55A26F7939F006E85C4 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D4B55826F7939F006E85C4 /* ListTableViewCell.xib */; };
 		50D4B55E26F79D24006E85C4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 50D4B55D26F79D24006E85C4 /* README.md */; };
+		50D4B56126F7A76B006E85C4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B56026F7A76B006E85C4 /* APIClient.swift */; };
+		50D4B56326F7A905006E85C4 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B56226F7A905006E85C4 /* DataExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		50D4B55726F7939F006E85C4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		50D4B55826F7939F006E85C4 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		50D4B55D26F79D24006E85C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50D4B56026F7A76B006E85C4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		50D4B56226F7A905006E85C4 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		50D4B51626F791A4006E85C4 /* Metadata-dapi */ = {
 			isa = PBXGroup;
 			children = (
+				50D4B55F26F7A75F006E85C4 /* Network */,
 				50D4B55126F792B9006E85C4 /* Helpers */,
 				50D4B54A26F791FA006E85C4 /* Manager */,
 				50D4B54726F791D2006E85C4 /* Modules */,
@@ -192,6 +197,7 @@
 			children = (
 				50D4B55226F792CD006E85C4 /* UIViewControllerExtensions.swift */,
 				50D4B55426F7930E006E85C4 /* UITableViewExtensions.swift */,
+				50D4B56226F7A905006E85C4 /* DataExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -203,6 +209,14 @@
 				50D4B55826F7939F006E85C4 /* ListTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50D4B55F26F7A75F006E85C4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				50D4B56026F7A76B006E85C4 /* APIClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,11 +354,13 @@
 				50D4B55526F7930E006E85C4 /* UITableViewExtensions.swift in Sources */,
 				50D4B55926F7939F006E85C4 /* ListTableViewCell.swift in Sources */,
 				50D4B51C26F791A4006E85C4 /* ListingViewController.swift in Sources */,
+				50D4B56326F7A905006E85C4 /* DataExtensions.swift in Sources */,
 				50D4B51826F791A4006E85C4 /* AppDelegate.swift in Sources */,
 				50D4B54F26F7925E006E85C4 /* MetadataFetchService.swift in Sources */,
 				50D4B51A26F791A4006E85C4 /* SceneDelegate.swift in Sources */,
 				50D4B55326F792CD006E85C4 /* UIViewControllerExtensions.swift in Sources */,
 				50D4B54C26F79249006E85C4 /* ListingViewModel.swift in Sources */,
+				50D4B56126F7A76B006E85C4 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
