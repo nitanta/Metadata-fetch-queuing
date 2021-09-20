@@ -25,7 +25,6 @@ final class ListingViewController: UIViewController {
         setupUI()
         configureDataSource()
         setupBindings()
-        viewModel.setupData()
     }
     
     /// Perform UI setup
@@ -40,8 +39,7 @@ final class ListingViewController: UIViewController {
     
     /// Add right button on the navigation bar
     private func addRightBarItem() {
-        let rightButton = UIBarButtonItem(title: Constants.start, style: .plain, target: self, action: #selector(startButtonPressed))
-        navigationItem.rightBarButtonItem = rightButton
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.start, style: .plain, target: self, action: #selector(startTapped))
     }
     
     /// Bindings
@@ -54,10 +52,11 @@ final class ListingViewController: UIViewController {
             let stateValueHandler: (ListingViewModel.ViewModelState) -> Void = { [weak self] state in
                 guard let self = self else { return }
                 switch state {
+                case .start:
+                    self.startState()
                 case .loading:
                     self.loadingState()
-                case .finishedLoading:
-                    self.errorState()
+                case .finishedLoading: break
                 case .error(let error):
                     self.showError(Constants.error, error)
                 }
@@ -95,19 +94,21 @@ final class ListingViewController: UIViewController {
         navigationItem.rightBarButtonItem = nil
     }
     
-    /// UI changes on error state
-    private func errorState() {
+    /// UI changes on start state
+    private func startState() {
         addRightBarItem()
     }
     
     /// Start button is pressed
-    @objc private func startButtonPressed() {
-        
+    @objc private func startTapped() {
+        viewModel.fetchMetadata()
     }
 }
 
 // MARK: - Populating the table view and interacting with it
 extension ListingViewController: UITableViewDelegate {
+    
+    /// Get the datasource for the tableview
     private func configureDataSource() {
         dataSource = DataSource(
             tableView: tableView,

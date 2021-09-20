@@ -37,7 +37,8 @@ extension SceneDelegate {
     /// Make a new root controller providing the necessary details
     private func addNewRoot() {
         let listViewController = ListingViewController.initialize(.main)
-        listViewController.viewModel = ListingViewModel(service: MetadataFetchService())
+        let sites = Sites.allCases.map { $0.rawValue }
+        listViewController.viewModel = ListingViewModel(service: MetadataRetreiver(urls: sites))
         
         let navigationController = UINavigationController(rootViewController: listViewController)
         window?.rootViewController = navigationController
