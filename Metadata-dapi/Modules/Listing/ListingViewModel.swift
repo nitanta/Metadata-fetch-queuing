@@ -8,33 +8,29 @@
 import Foundation
 import Combine
 
+/// Enum for datasource
 enum Sites: String, CaseIterable {
-    case apple          = "https://apple.com"
-    case spacex         = "https://spacex.com"
-    case dapi           = "https://dapi.co"
-    case facebook       = "https://facebook.com"
-    case microsoft      = "https://microsoft.com"
-    case amazon         = "https://amazon.com"
-    case boomsupersonic = "https://boomsupersonic.com"
-    case twitter        = "https://twitter.com"
+    case apple          = "https://www.apple.com"
+    case spacex         = "https://www.spacex.com"
+    case dapi           = "https://www.dapi.co"
+    case facebook       = "https://www.facebook.com"
+    case microsoft      = "https://www.microsoft.com"
+    case amazon         = "https://www.amazon.com"
+    case boomsupersonic = "https://www.boomsupersonic.com"
+    case twitter        = "https://www.twitter.com"
 }
 
-enum State: Hashable {
-    case idle
-    case running
-    case successful(String, String) // Favicon url and data size
-    case failed(Int) // error code
-}
-
+/// Model for populating the cells
 struct ListingModel: Hashable, Equatable {
     var url: String
     var state: State = .idle
 }
 
-
 final class ListingViewModel {
     
+    /// States for the viewcontroller
     enum ViewModelState {
+        case start
         case loading
         case finishedLoading
         case error(Error)
@@ -42,23 +38,34 @@ final class ListingViewModel {
     
     enum Section { case contents }
     
-    private let service: MetadataFetchServiceProtocol
+    private let service: MetadataRetreiveProtocol
     private var bag = Set<AnyCancellable>()
     
     @Published private(set) var datasource: [ListingModel] = []
-    @Published private(set) var state: ViewModelState = .loading
+    @Published private(set) var state: ViewModelState = .start
     
     
-    init(service: MetadataFetchServiceProtocol) {
+    init(service: MetadataRetreiveProtocol) {
         self.service = service
+        setupObservers()
     }
     
-    func setupData() {
-        datasource = Sites.allCases.map { ListingModel(url: $0.rawValue)}
-    }
-    
-    func fetchMetadata() {
+    /// Add observers to listen to changes in the datasource
+    func setupObservers() {
+        let callCompletionHandler: (Subscribers.Completion<Error>) -> Void = { _ in }
         
+        let callValueHandler: ([ListingModel]) -> Void = { [weak self] response in
+            guard let self = self else { return }
+            self.datasource = response
+        }
+        
+        service.datasource.sink(receiveCompletion: callCompletionHandler, receiveValue: callValueHandler).store(in: &bag)
+    }
+    
+    /// Perform request to fetch the metadata
+    func fetchMetadata() {
+        state = .loading
+        service.fetchMetadata()
     }
     
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50A3BE4426F8305400783167 /* MetadataRetreiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4326F8305400783167 /* MetadataRetreiver.swift */; };
 		50D4B51826F791A4006E85C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51726F791A4006E85C4 /* AppDelegate.swift */; };
 		50D4B51A26F791A4006E85C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51926F791A4006E85C4 /* SceneDelegate.swift */; };
 		50D4B51C26F791A4006E85C4 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51B26F791A4006E85C4 /* ListingViewController.swift */; };
@@ -16,7 +17,7 @@
 		50D4B52F26F791A7006E85C4 /* Metadata_dapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B52E26F791A7006E85C4 /* Metadata_dapiTests.swift */; };
 		50D4B53A26F791A7006E85C4 /* Metadata_dapiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B53926F791A7006E85C4 /* Metadata_dapiUITests.swift */; };
 		50D4B54C26F79249006E85C4 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B54B26F79249006E85C4 /* ListingViewModel.swift */; };
-		50D4B54F26F7925E006E85C4 /* MetadataFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B54E26F7925E006E85C4 /* MetadataFetchService.swift */; };
+		50D4B54F26F7925E006E85C4 /* MetadataFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B54E26F7925E006E85C4 /* MetadataFetchOperation.swift */; };
 		50D4B55326F792CD006E85C4 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B55226F792CD006E85C4 /* UIViewControllerExtensions.swift */; };
 		50D4B55526F7930E006E85C4 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B55426F7930E006E85C4 /* UITableViewExtensions.swift */; };
 		50D4B55926F7939F006E85C4 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B55726F7939F006E85C4 /* ListTableViewCell.swift */; };
@@ -24,6 +25,7 @@
 		50D4B55E26F79D24006E85C4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 50D4B55D26F79D24006E85C4 /* README.md */; };
 		50D4B56126F7A76B006E85C4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B56026F7A76B006E85C4 /* APIClient.swift */; };
 		50D4B56326F7A905006E85C4 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B56226F7A905006E85C4 /* DataExtensions.swift */; };
+		50D4B56626F7AFAE006E85C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 50D4B56526F7AFAE006E85C4 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50A3BE4326F8305400783167 /* MetadataRetreiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataRetreiver.swift; sourceTree = "<group>"; };
 		50D4B51426F791A4006E85C4 /* Metadata-dapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metadata-dapi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D4B51726F791A4006E85C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D4B51926F791A4006E85C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +62,7 @@
 		50D4B53926F791A7006E85C4 /* Metadata_dapiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata_dapiUITests.swift; sourceTree = "<group>"; };
 		50D4B53B26F791A7006E85C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D4B54B26F79249006E85C4 /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
-		50D4B54E26F7925E006E85C4 /* MetadataFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataFetchService.swift; sourceTree = "<group>"; };
+		50D4B54E26F7925E006E85C4 /* MetadataFetchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataFetchOperation.swift; sourceTree = "<group>"; };
 		50D4B55226F792CD006E85C4 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		50D4B55426F7930E006E85C4 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		50D4B55726F7939F006E85C4 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D4B56626F7AFAE006E85C4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +182,8 @@
 		50D4B54A26F791FA006E85C4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				50D4B54E26F7925E006E85C4 /* MetadataFetchService.swift */,
+				50D4B54E26F7925E006E85C4 /* MetadataFetchOperation.swift */,
+				50A3BE4326F8305400783167 /* MetadataRetreiver.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -235,6 +240,9 @@
 			dependencies = (
 			);
 			name = "Metadata-dapi";
+			packageProductDependencies = (
+				50D4B56526F7AFAE006E85C4 /* Kingfisher */,
+			);
 			productName = "Metadata-dapi";
 			productReference = 50D4B51426F791A4006E85C4 /* Metadata-dapi.app */;
 			productType = "com.apple.product-type.application";
@@ -306,6 +314,9 @@
 				Base,
 			);
 			mainGroup = 50D4B50B26F791A4006E85C4;
+			packageReferences = (
+				50D4B56426F7AFAE006E85C4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 50D4B51526F791A4006E85C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -355,8 +366,9 @@
 				50D4B55926F7939F006E85C4 /* ListTableViewCell.swift in Sources */,
 				50D4B51C26F791A4006E85C4 /* ListingViewController.swift in Sources */,
 				50D4B56326F7A905006E85C4 /* DataExtensions.swift in Sources */,
+				50A3BE4426F8305400783167 /* MetadataRetreiver.swift in Sources */,
 				50D4B51826F791A4006E85C4 /* AppDelegate.swift in Sources */,
-				50D4B54F26F7925E006E85C4 /* MetadataFetchService.swift in Sources */,
+				50D4B54F26F7925E006E85C4 /* MetadataFetchOperation.swift in Sources */,
 				50D4B51A26F791A4006E85C4 /* SceneDelegate.swift in Sources */,
 				50D4B55326F792CD006E85C4 /* UIViewControllerExtensions.swift in Sources */,
 				50D4B54C26F79249006E85C4 /* ListingViewModel.swift in Sources */,
@@ -693,6 +705,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50D4B56426F7AFAE006E85C4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50D4B56526F7AFAE006E85C4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50D4B56426F7AFAE006E85C4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50D4B50C26F791A4006E85C4 /* Project object */;
 }

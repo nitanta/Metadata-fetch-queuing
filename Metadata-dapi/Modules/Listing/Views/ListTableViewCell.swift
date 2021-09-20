@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListTableViewCell: UITableViewCell {
 
@@ -34,6 +35,7 @@ class ListTableViewCell: UITableViewCell {
         switch model.state {
         case .successful(let iconURL, let dataSize):
             [logoImageView, subtitleLabel].forEach { $0?.isHidden = false }
+            logoImageView.kf.setImage(with: URL(string: iconURL))
             subtitleLabel.text = dataSize
         case .failed(let error):
             subtitleLabel.text = "\(error)"

@@ -18,7 +18,7 @@ class APIClient {
     /// - Parameter endpoint: endpoint
     /// - Returns: publisher containing either data(i.e Favicon url and data size)  or error
     func getData(from endpoint: String) -> AnyPublisher<CallData, Error> {
-        guard let request = prepareRequest(for: endpoint) else {
+        guard let request = buildRequest(for: endpoint) else {
             return Fail(error: NSError(
                             domain: "com.metadata-dapi.com",
                             code: 400,
@@ -36,7 +36,7 @@ class APIClient {
     /// Build the url request for the endpoint
     /// - Parameter endpoint: url
     /// - Returns: urlrequest for the endpoint
-    private func prepareRequest(for endpoint: String) -> URLRequest? {
+    private func buildRequest(for endpoint: String) -> URLRequest? {
         guard let url = URL(string: endpoint) else {
             return nil
         }
@@ -59,8 +59,6 @@ class APIClient {
                 return error
             })
             .map {
-                debugPrint("RESPONSE:: ", $0.response)
-                debugPrint("String data:: ", $0.data.prettyPrintedString as Any)
                 return (String(format: "%@/favicon.ico", request.url!.absoluteString), $0.data.sizeString())
             }
             .eraseToAnyPublisher()
