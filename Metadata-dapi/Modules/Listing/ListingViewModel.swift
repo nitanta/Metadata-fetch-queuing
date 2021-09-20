@@ -26,7 +26,14 @@ struct ListingModel: Hashable, Equatable {
     var state: State = .idle
 }
 
-final class ListingViewModel {
+protocol ListViewModelImplementable {
+    init(service: MetadataRetreiveProtocol)
+    func setupObservers()
+    func fetchMetadata()
+    var datasource: [ListingModel] { get set }
+}
+
+final class ListingViewModel: ListViewModelImplementable {
     
     /// States for the viewcontroller
     enum ViewModelState {
@@ -36,18 +43,17 @@ final class ListingViewModel {
         case error(Error)
     }
     
-    enum Section { case contents }
+    enum Section: String { case contents = "CONTENTS" }
     
     private let service: MetadataRetreiveProtocol
     private var bag = Set<AnyCancellable>()
     
-    @Published private(set) var datasource: [ListingModel] = []
+    @Published var datasource: [ListingModel] = []
     @Published private(set) var state: ViewModelState = .start
     
     
     init(service: MetadataRetreiveProtocol) {
         self.service = service
-        setupObservers()
     }
     
     /// Add observers to listen to changes in the datasource

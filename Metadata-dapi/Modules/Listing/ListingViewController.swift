@@ -8,12 +8,13 @@
 import UIKit
 import Combine
 
+
 final class ListingViewController: UIViewController {
     
     private typealias DataSource = UITableViewDiffableDataSource<ListingViewModel.Section, ListingModel>
     private typealias Snapshot = NSDiffableDataSourceSnapshot<ListingViewModel.Section, ListingModel>
 
-    var viewModel: ListingViewModel!
+    var viewModel: ListViewModelImplementable!
     private var bag = Set<AnyCancellable>()
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,6 +25,7 @@ final class ListingViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureDataSource()
+        viewModel.setupObservers()
         setupBindings()
     }
     
@@ -32,8 +34,8 @@ final class ListingViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = Constants.title
         addRightBarItem()
-        tableView.register(UINib(nibName: ListTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.cellIdentifier)
         tableView.delegate = self
+        tableView.register(UINib(nibName: ListTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.cellIdentifier)
         tableView.tableFooterView = UIView()
     }
     
@@ -44,6 +46,7 @@ final class ListingViewController: UIViewController {
     
     /// Bindings
     func setupBindings() {
+        guard let viewModel = viewModel as? ListingViewModel else { return }
         /// Bind view to viewmodel
         func bindViewToViewModel() {}
         
@@ -83,9 +86,11 @@ final class ListingViewController: UIViewController {
     
     /// Create a snapshot for tha tableview
     private func updateSections() {
+        guard let viewModel = viewModel as? ListingViewModel else { return }
+
         var snapshot = Snapshot()
         snapshot.appendSections([.contents])
-        snapshot.appendItems(viewModel.datasource)
+        snapshot.appendItems(viewModel.datasource, toSection: .contents)
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
@@ -100,7 +105,7 @@ final class ListingViewController: UIViewController {
     }
     
     /// Start button is pressed
-    @objc private func startTapped() {
+    @objc func startTapped() {
         viewModel.fetchMetadata()
     }
 }
@@ -116,7 +121,58 @@ extension ListingViewController: UITableViewDelegate {
                 let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.cellIdentifier, for: indexPath) as? ListTableViewCell
                 cell?.configure(model: data)
                 return cell
-            })
+            }
+        )
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let model = dataSource.itemIdentifier(for: IndexPath(item: 0, section: section)) else { return nil }
+        let title = dataSource.snapshot().sectionIdentifier(containingItem: model)?.rawValue
+        return createHeader(with: title)
+    }
+}
+
+// MARK: - Create header for the labelview
+extension ListingViewController {
+    
+    /// Create a header  for the section
+    /// - Parameter title: title for the section
+    /// - Returns: return uiview representing the header
+    private func createHeader(with title: String?) -> UIView {
+        let view = getHeaderView()
+        
+        let label = getHeaderLabel()
+        label.text = title
+        
+        view.addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 22).isActive = true
+        label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 22).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        
+        return view
+    }
+    
+    /// Get the wrapper view for containing label
+    /// - Returns: returns a view
+    private func getHeaderView() -> UIView {
+        let view = UIView()
+        return view
+    }
+    
+    /// Get the label for displaying the header
+    /// - Returns: returns the label for the header
+    private func getHeaderLabel() -> UILabel {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .gray
+        return label
     }
 }
 

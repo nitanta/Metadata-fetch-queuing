@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		50A3BE4426F8305400783167 /* MetadataRetreiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4326F8305400783167 /* MetadataRetreiver.swift */; };
 		50A3BE4626F8C1F400783167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4526F8C1F400783167 /* StringExtension.swift */; };
+		50A3BE4926F8C76500783167 /* ListingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4826F8C76500783167 /* ListingViewControllerTests.swift */; };
+		50A3BE4C26F8C77900783167 /* ListTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4B26F8C77900783167 /* ListTableViewCellTests.swift */; };
 		50D4B51826F791A4006E85C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51726F791A4006E85C4 /* AppDelegate.swift */; };
 		50D4B51A26F791A4006E85C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51926F791A4006E85C4 /* SceneDelegate.swift */; };
 		50D4B51C26F791A4006E85C4 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51B26F791A4006E85C4 /* ListingViewController.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		50A3BE4326F8305400783167 /* MetadataRetreiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataRetreiver.swift; sourceTree = "<group>"; };
 		50A3BE4526F8C1F400783167 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		50A3BE4826F8C76500783167 /* ListingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewControllerTests.swift; sourceTree = "<group>"; };
+		50A3BE4B26F8C77900783167 /* ListTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellTests.swift; sourceTree = "<group>"; };
 		50D4B51426F791A4006E85C4 /* Metadata-dapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metadata-dapi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D4B51726F791A4006E85C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D4B51926F791A4006E85C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50A3BE4726F8C75100783167 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				50A3BE4A26F8C76900783167 /* Views */,
+				50A3BE4826F8C76500783167 /* ListingViewControllerTests.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		50A3BE4A26F8C76900783167 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50A3BE4B26F8C77900783167 /* ListTableViewCellTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		50D4B50B26F791A4006E85C4 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +157,7 @@
 		50D4B52D26F791A7006E85C4 /* Metadata-dapiTests */ = {
 			isa = PBXGroup;
 			children = (
+				50A3BE4726F8C75100783167 /* Module */,
 				50D4B52E26F791A7006E85C4 /* Metadata_dapiTests.swift */,
 				50D4B53026F791A7006E85C4 /* Info.plist */,
 			);
@@ -384,6 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A3BE4C26F8C77900783167 /* ListTableViewCellTests.swift in Sources */,
+				50A3BE4926F8C76500783167 /* ListingViewControllerTests.swift in Sources */,
 				50D4B52F26F791A7006E85C4 /* Metadata_dapiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

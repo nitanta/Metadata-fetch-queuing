@@ -1,5 +1,6 @@
 # Metadata-fetch-queuing
-Sample application that fetches metadata using serial queue.
+
+Application that fetches metadata using serial queue. Implementation of a serial queue using OperationQueue. Runs only one concurrent operation.
 
 ## Features
 
@@ -8,7 +9,7 @@ Sample application that fetches metadata using serial queue.
     Uses diffable datsource for tableview population.
     Minimal use of external dependencies, used Kingfisher for image caching.
     Avoided the use of IBDesignable and IBInspectable inorder to make storyboards a bit light.
-    Unit tested only the service layer.
+    Unit tested only a small portion of the application.
     Made sure that there are no constraint breaks and memory leaks
 
 ## Areas for improvement
@@ -16,4 +17,4 @@ Sample application that fetches metadata using serial queue.
     Unit testing can be implemented throughout the application with a very significant code coverage.
     Metadata caching can be done, so we do not have to always make api calls
 
-Total time: 2.5 hrs
+Total time: 3 hrs

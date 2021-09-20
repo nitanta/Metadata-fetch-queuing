@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 protocol MetadataRetreiveProtocol {
+    init(urls: [String])
     func fetchMetadata()
     var datasource: CurrentValueSubject<[ListingModel], Error> { get set }
 }
