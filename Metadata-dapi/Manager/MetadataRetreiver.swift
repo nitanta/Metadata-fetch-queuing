@@ -40,7 +40,7 @@ final class MetadataRetreiver: MetadataRetreiveProtocol {
     /// Make the network calls for all the urls. Uses operation queue for it.
     func fetchMetadata() {
         self.urls.forEach { url in
-            let fetchOperation = MetadataFetchOperation(client: APIClient(), url: url)
+            let fetchOperation = MetadataFetchOperation(client: APIClient(), url: url.correctLink())
             let callValueHandler: (State) -> Void = { [weak self] state in
                 guard let self = self else { return }
                 let model = ListingModel(url: url, state: state)

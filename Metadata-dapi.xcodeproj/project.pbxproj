@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50A3BE4426F8305400783167 /* MetadataRetreiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4326F8305400783167 /* MetadataRetreiver.swift */; };
+		50A3BE4626F8C1F400783167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3BE4526F8C1F400783167 /* StringExtension.swift */; };
 		50D4B51826F791A4006E85C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51726F791A4006E85C4 /* AppDelegate.swift */; };
 		50D4B51A26F791A4006E85C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51926F791A4006E85C4 /* SceneDelegate.swift */; };
 		50D4B51C26F791A4006E85C4 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4B51B26F791A4006E85C4 /* ListingViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		50A3BE4326F8305400783167 /* MetadataRetreiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataRetreiver.swift; sourceTree = "<group>"; };
+		50A3BE4526F8C1F400783167 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		50D4B51426F791A4006E85C4 /* Metadata-dapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metadata-dapi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D4B51726F791A4006E85C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D4B51926F791A4006E85C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				50D4B55226F792CD006E85C4 /* UIViewControllerExtensions.swift */,
 				50D4B55426F7930E006E85C4 /* UITableViewExtensions.swift */,
 				50D4B56226F7A905006E85C4 /* DataExtensions.swift */,
+				50A3BE4526F8C1F400783167 /* StringExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				50D4B51826F791A4006E85C4 /* AppDelegate.swift in Sources */,
 				50D4B54F26F7925E006E85C4 /* MetadataFetchOperation.swift in Sources */,
 				50D4B51A26F791A4006E85C4 /* SceneDelegate.swift in Sources */,
+				50A3BE4626F8C1F400783167 /* StringExtension.swift in Sources */,
 				50D4B55326F792CD006E85C4 /* UIViewControllerExtensions.swift in Sources */,
 				50D4B54C26F79249006E85C4 /* ListingViewModel.swift in Sources */,
 				50D4B56126F7A76B006E85C4 /* APIClient.swift in Sources */,

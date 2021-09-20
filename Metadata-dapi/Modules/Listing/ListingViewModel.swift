@@ -10,14 +10,14 @@ import Combine
 
 /// Enum for datasource
 enum Sites: String, CaseIterable {
-    case apple          = "https://www.apple.com"
-    case spacex         = "https://www.spacex.com"
-    case dapi           = "https://www.dapi.co"
-    case facebook       = "https://www.facebook.com"
-    case microsoft      = "https://www.microsoft.com"
-    case amazon         = "https://www.amazon.com"
-    case boomsupersonic = "https://www.boomsupersonic.com"
-    case twitter        = "https://www.twitter.com"
+    case apple          = "apple.com"
+    case spacex         = "spacex.com"
+    case dapi           = "dapi.co"
+    case facebook       = "facebook.com"
+    case microsoft      = "microsoft.com"
+    case amazon         = "amazon.com"
+    case boomsupersonic = "boomsupersonic.com"
+    case twitter        = "twitter.com"
 }
 
 /// Model for populating the cells
