@@ -28,9 +28,9 @@ Some notable areas for fixing:
 Here are some of the important links:
 
 Environment | URL
----------------------
-staging | www.apple.com
-production | www.apple.com
+------------|---------------
+staging     | www.apple.com
+production  | www.apple.com
 
 ## Other links
 Here are a few other links:
