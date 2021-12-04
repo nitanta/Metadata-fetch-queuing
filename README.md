@@ -10,8 +10,8 @@ git clone --recursive git@github.com:apple/apple.git
 ```
 
 ## Features 🚀
-General overview for the project:
-        * Employs MVVM architecture with functional reactive programming.
+General overview for the project: 
+- Employs MVVM architecture with functional reactive programming.
         * Uses the combine framework for reactive binding.
         - Uses diffable datsource for tableview population.
         - Minimal use of external dependencies, used Kingfisher for image caching.
