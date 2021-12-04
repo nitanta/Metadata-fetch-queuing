@@ -1,4 +1,4 @@
-![alt_text](appIcon)
+![alt text](appIcon)
 # Metadata-fetch-queuing
 
 Application that fetches metadata using serial queue. Implementation of a serial queue using OperationQueue. Runs only one concurrent operation. Refer to [overview](cocoapodsURL)
@@ -49,7 +49,7 @@ Total time: 3 hrs
 Closed Source.
 Copyright (c) 2018-2019 [Nirvana](https://apple.com)
 
-![alt_text](company-logo)
+![alt text](company-logo)
 
 [company-logo]: https://user-images.githubusercontent.com/14129317/144712053-9b52f497-12fc-4ab6-9476-92a1d8e830bd.png
 [appIcon]: https://user-images.githubusercontent.com/14129317/144712053-9b52f497-12fc-4ab6-9476-92a1d8e830bd.png
