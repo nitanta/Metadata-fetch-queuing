@@ -51,8 +51,8 @@ Copyright (c) 2018-2019 [Nirvana](https://apple.com)
 
 ![alt_text](company-logo)
 
-[company-logo]: https://www.google.com "Operation queue"
-[appIcon]: https://user-images.githubusercontent.com/14129317/144711920-b5d1e98d-ca77-4b41-aae8-230dbe0528c2.png "Operation queue"
+[company-logo]: https://user-images.githubusercontent.com/14129317/144711920-b5d1e98d-ca77-4b41-aae8-230dbe0528c2.png
+[appIcon]: https://user-images.githubusercontent.com/14129317/144711920-b5d1e98d-ca77-4b41-aae8-230dbe0528c2.png
 [cocoapodsURL]: https://cocoapods.org
 [carthageURL]: https://github.com/Carthage/Carthage
 [fastlaneURL]: https://fastlane.tools
