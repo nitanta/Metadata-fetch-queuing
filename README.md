@@ -20,9 +20,9 @@ General overview for the project:
 - Made sure that there are no constraint breaks and memory leaks
 
 ## Areas for improvement
-Some notable areas for fixing:
-        - Unit testing can be implemented throughout the application with a very significant code coverage.
-        - Metadata caching can be done, so we do not have to always make api calls
+Some notable areas for fixing: 
+- Unit testing can be implemented throughout the application with a very significant code coverage.
+- Metadata caching can be done, so we do not have to always make api calls
     
 ## Links
 Here are some of the important links:
@@ -37,10 +37,10 @@ Here are a few other links:
 
 - ⏰ [cocoapods](https://cocoapods.org)
 - 🤟 [carthage](https://github.com/Carthage/Carthage)
-- 🏁 [fastlane](https://fastlane.tools):
-            - Employs MVVM architecture with functional reactive programming.
-            - Uses the combine framework for reactive binding.
-            - Uses diffable datsource for tableview population.
+- 🏁 [fastlane](https://fastlane.tools): -
+-  Employs MVVM architecture with functional reactive programming.
+-  Uses the combine framework for reactive binding.
+-  Uses diffable datsource for tableview population.
 
 Total time: 3 hrs
 
