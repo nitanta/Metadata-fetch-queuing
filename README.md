@@ -49,10 +49,10 @@ Total time: 3 hrs
 Closed Source.
 Copyright (c) 2018-2019 [Nirvana](https://apple.com)
 
-![alt_text](company-logo)
+![alt_text] [company-logo]
 
-[company-logo]: https://user-images.githubusercontent.com/14129317/144711920-b5d1e98d-ca77-4b41-aae8-230dbe0528c2.png
-[appIcon]: https://user-images.githubusercontent.com/14129317/144711920-b5d1e98d-ca77-4b41-aae8-230dbe0528c2.png
+[company-logo]: https://avatars1.githubusercontent.com/u/177825?s=200&v=4 "1112 Delivery"
+[appIcon]: https://avatars1.githubusercontent.com/u/177825?s=200&v=4 "1112 Delivery"
 [cocoapodsURL]: https://cocoapods.org
 [carthageURL]: https://github.com/Carthage/Carthage
 [fastlaneURL]: https://fastlane.tools
